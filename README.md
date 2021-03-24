@@ -1,2 +1,2 @@
-# Security-App
+# Shortest-Job-First-Algorithm
 Created with CodeSandbox

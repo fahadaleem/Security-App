@@ -1,0 +1,87 @@
+/* button colors: #E73787 */
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+
+.nav-link {
+  border-radius: 20px;
+  color: white !important;
+  font-weight: bold;
+}
+#header {
+  background-position: center;
+  background-size: cover;
+  background: #c33764; /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(
+      rgba(29, 38, 113, 0.8),
+      rgba(195, 55, 100, 0.8)
+    ),
+    url("../src/images/header.jpg");
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)),
+    url("/src/header.jpg"); /* The least supported option. */
+}
+#login-btn {
+  background-color: #e73787;
+  margin: 10px 5px;
+}
+
+#signup-btn {
+  background-color: rgb(29, 38, 113);
+  margin: 10px 5px;
+}
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+.btn {
+  background-color: rgb(29, 38, 113, 1);
+  border-radius: 25px;
+  color: white !important;
+  font-weight: bold;
+  padding: 10px 40px;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.btn:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+#hero-section {
+  padding: 4rem 0;
+}
+
+#feat-sec-h1 {
+  color:rgb(29, 38, 113);
+}
+#features-section {
+  background-color: black;
+  color: white;
+}
+.feat-sec-2 {
+  background: none;
+  text-align: center !important;
+  /* background-color://tm choose krna */
+}
+
+
+
+
+
+
+
+
+
+/* last section styling */
+#last-section h1
+{
+  color:rgb(29, 38, 113);
+}
