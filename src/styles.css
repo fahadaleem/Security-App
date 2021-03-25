@@ -1,0 +1,77 @@
+/* button colors: #E73787 */
+
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+.nav-link {
+  border-radius: 25px;
+  color: white !important;
+  font-weight: bold;
+}
+#header {
+  background: linear-gradient(90deg, rgba(142, 80, 253,0.8), rgba(98, 196, 250,0.7)), url("./images/header.jpeg"); /* The least supported option. */
+    background-position: center;
+    background-size: cover;
+  }
+#login-btn {
+  background-color: #9647FD;
+  margin: 10px 5px;
+}
+
+#signup-btn {
+  background-color: #62C4FA;
+  margin: 10px 5px;
+}
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+#hero-section .row .col-lg-8 .display-4
+{
+  color:white !important;
+}
+
+
+.btn {
+  background-color: #62C4FA!important;
+  border-radius: 25px;
+  color: #0C203F !important;
+  font-weight: bold;
+  padding: 10px 40px;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.btn:hover {
+  transform: translateY(-10px);
+  transition: 0.5s ;
+}
+
+.display-4
+{
+  color: #3D8086 !important;
+}
+
+#hero-section {
+  padding: 4rem 0;
+}
+
+#feat-sec-h1 {
+  color: #14213d;
+}
+#features-section {
+  background-color: black;
+  color: white;
+}
+.feat-sec-2 {
+  background: none;
+  text-align: center !important;
+  /* background-color://tm choose krna */
+}
+

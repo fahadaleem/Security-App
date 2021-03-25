@@ -1,0 +1,48 @@
+*
+{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body
+{
+    background: linear-gradient(90deg, rgba(142, 80, 253,1), rgba(98, 196, 250,1)); /* The least supported option. */
+}
+#sign-up-form
+{
+    min-width: 300px;
+    max-width: 45%;
+    background-color: #EBEBEB;
+    margin-top: 2rem;
+    padding:3rem;
+}
+
+.form-inline .input-group
+{
+    width: 45%;
+}
+
+.form-control
+{
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 4px solid grey !important;
+    background-color: transparent !important;
+    padding-left: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 1.3rem 0;
+}
+
+#sign-up-form.rounded
+{
+    border-radius: 5px !important;
+}
+
+#submit-btn
+{
+    width: 70%;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(142, 80, 253,1), rgba(98, 196, 250,1));
+    border: none !important;
+}
