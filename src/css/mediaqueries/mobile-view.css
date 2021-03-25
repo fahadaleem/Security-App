@@ -1,0 +1,27 @@
+/* mobile view setting here */
+
+@media screen and (max-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+  }
+  #hero-section .row .col-lg-8 {
+    text-align: center;
+  }
+  #tag-line {
+    font-size: 1.5rem;
+  }
+  #sign-up-form
+  {
+    min-width: 80% !important;
+  }
+  
+}

@@ -1,125 +1,196 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
 
-<head>
-	<title>Parcel Sandbox</title>
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<meta charset="UTF-8" />
-		<link rel="stylesheet" href="./src/styles.css">
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!---icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<!---icons-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!---media queries-->
-<link rel="stylesheet" href="./src/mediaqueries/mobile-view.css">
-
-</head>
-
-<body>
-	<div id="header">
-		<nav class="navbar navbar-expand-lg navbar-light container">
-			<a class="navbar-brand text-white font-weight-bold" href="#">SSA - Social Security App</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link px-4 mx-2" href="#" id="login-btn">login <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link px-4 mr-3" href="#" id="signup-btn">sign up <span class="sr-only">(current)</span></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!---hero area----->
-		<header class="container my-4" id="hero-section">
-			<div class="row">
-				<div class="col-lg-8 text-white">
-						<h2 class="display-4 font-weight-bold">Social Security App</h2>
-						<h3 id="tag-line" class="my-2@med">A place where you can connect with your favourite ones, and find the location of them!</h3>
-					<button class="btn">Explore This App</button>
-					</div>
-			</div>
-		</header>
-	</div>
-
-<!----Features section------>
-
-<div class="container feat-sec-2">
-<h1 id="feat-sec-h1" class="text-center display-4 font-weight-bold my-4"> FEATURES </h1>
-<div class="row">
-	<div class="col-lg-4">
-		
-		<h2> <i class="fa fa-phone"></i> Location</h2>
-	</div>
-	<div class="col-lg-4">
-	<h2><i class="fa fa-envelope"></i> Application</h2>
-		</div>
-		<div class="col-lg-4">
-			<h2><i class="fa fa-user"></i> Connection</h2>
-			</div>
-</div>
-<div class="row">
-	<div class="col-lg-4">
-		
-		<h2>Phone Call</h2>
-	</div>
-	<div class="col-lg-4">
-	<h2>	Privacy</h2>
-		</div>
-	</div>
-</div>
+    <!---media queries-->
+    <link rel="stylesheet" href="/src/css/mediaqueries/mobile-view.css" />
 
 
+  </head>
 
-<!----last section, Guide to the app------>
-<section id="last-section" class="container my-4">	
-	<h1 class="display-4 font-weight-bold text-center text-uppercase">How this app will work?</h1>
-	<p class="lead text-center font-weight-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis repellendus beatae maiores iure cum libero modi ducimus quisquam autem? Dolor voluptas provident laboriosam distinctio rem alias mollitia et quae earum!</p>
-</section>
+  <body>
+    <div id="header">
+      <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand text-white font-weight-bold" href="#"
+          >SSA - Social Security App</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link px-4 mx-2" href="#" id="login-btn"
+                >login <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link px-4 mr-3" href="/src/pages/signup.html" id="signup-btn"
+                >sign up <span class="sr-only">(current)</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!---hero area----->
+      <header class="container my-4" id="hero-section">
+        <div class="row">
+          <div class="col-lg-8 text-white">
+            <h2 class="display-4 font-weight-bold">Social Security App</h2>
+            <h3 id="tag-line" class="my-2@med">
+              A place where you can connect with your favourite ones, and find
+              the location of them!
+            </h3>
+            <button class="btn">Explore This App <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </header>
+    </div>
 
-<!----footer-->
-<footer>
-	<p>project build for IAD Project</p>
-</footer>
+    <!----Features section------>
+
+    <div class="container feat-sec-2">
+      <h1 id="feat-sec-h1" class="text-center display-4 font-weight-bold my-4">
+        FEATURES
+      </h1>
+      <div class="row">
+        <div class="col-lg-4">
+          <h2><i class="fa fa-location-arrow"></i> Location</h2>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            corporis soluta beatae error nemo illum adipisci enim eum sequi
+            quibusdam!
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h2><i class="fa fa-envelope"></i> Chat</h2>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            corporis soluta beatae error nemo illum adipisci enim eum sequi
+            quibusdam!
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h2><i class="fa fa-user"></i> Connection</h2>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            corporis soluta beatae error nemo illum adipisci enim eum sequi
+            quibusdam!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <h2><i class="fa fa-phone"></i> Phone Call</h2>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            corporis soluta beatae error nemo illum adipisci enim eum sequi
+            quibusdam!
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h2><i class="fa fa-lock"></i> Privacy</h2>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            corporis soluta beatae error nemo illum adipisci enim eum sequi
+            quibusdam!
+          </p>
+        </div>
+      </div>
+    </div>
 
 
+    <!-- familysection -->
+
+    <div class="container my-4">
+      <h1 class="display-4 text-center font-weight-bold">Family Safety</h1>
+      <div class="row">
+        <div class="col">
+          <br /><br />
+        </div>
+      </div>
+      <div style="font-size: 20px;" class="row">
+        <div class="col-lg-6">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus,
+            optio, natus quaerat repellendus, veritatis voluptates incidunt amet
+            inventore consequatur corrupti sed soluta ut. Non quia nostrum
+            corporis sit, voluptate doloribus ut laboriosam, quo eos minima
+            ullam aliquam accusamus cumque molestiae eveniet culpa sunt. Et sunt
+            odio, voluptatem sed veniam dolores.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="/src/images/family.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+    </div>
+    <!----last section, Guide to the app------>
+    <section id="last-section" class="container my-4">
+      <h1 class="display-4 font-weight-bold text-center text-uppercase">
+        How this app will work?
+      </h1>
+      <p class="lead text-center font-weight-normal">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+        repellendus beatae maiores iure cum libero modi ducimus quisquam autem?
+        Dolor voluptas provident laboriosam distinctio rem alias mollitia et
+        quae earum!
+      </p>
+    </section>
 
 
+   
 
+    <!----footer-->
+    <footer>
+      <p class="text-center text-uppercase font-weight-bold">project build for IAD Project</p>
+    </footer>
 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!---App js-->
+    <script src="/src/scripts/app.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<script src="src/index.js">
-	</script>
-	<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>
