@@ -1,61 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Signup at Social Security App</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="/src/css/style.css" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- stylesheet -->
-    <link rel="stylesheet" href="/src/css/style.css">
 
     <!-- mediaqueries -->
-    <link rel="stylesheet" href="/src/css/mediaqueries/mobile-view.css">
+    <link rel="stylesheet" href="/src/css/mediaqueries/mobile-view.css" />
 
-</head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAVOK5sqg8JUGgcMiJtiZM79b-hgzLCbhE",
+        authDomain: "security-jq.firebaseapp.com",
+        projectId: "security-jq",
+        storageBucket: "security-jq.appspot.com",
+        messagingSenderId: "13115223570",
+        appId: "1:13115223570:web:7268255ea3a69fe912b2cb",
+        measurementId: "G-DSMHVMJ4MN",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  </head>
   <body>
+    <!---Loader-->
+    <!-- <div class="d-flex justify-content-center" id="loader">
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div> -->
+    <!---form-->
+    <div class="content-body">
+      <form action="" class="container rounded shadow-lg" id="sign-up-form">
+        <h2 class="text-center text-uppercase font-weight-bold">
+          Create an Account
+        </h2>
+        <p class="lead text-center font-weight-normal">
+          Welcome, to the social security app
+        </p>
+        <div class="alert alert-dismissible fade show" role="alert" id="error-message">
+          <strong id="message">Password incorrect!</strong>
+          <button type="button" class="close close-btn" data-dismiss="alert">&times;</button>
+        </div>
+        <div class="form-inline form-group justify-content-between">
+          <div class="input-group">
+            <input
+              type="text"
+              name="name"
+              id="first-name"
+              class="form-control mr-2"
+              placeholder="First Name"
+              required = true
+              
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              name="name"
+              id="last-name"
+              class="form-control"
+              placeholder="Last Name"
+              required
 
-        <form action="" class="container rounded shadow-lg" id="sign-up-form">
-            <h2 class="text-center text-uppercase font-weight-bold">Create an Account</h2>
-            <p class="lead text-center font-weight-normal">Welcome, to the social security app</p>
-            <div class="form-inline form-group justify-content-between">
-                <div class="input-group">
-                    <input type="text" name="name" id="first-name" class="form-control mr-2 rounded-0 border-0" placeholder="First Name">
-                </div>
-                <div class="input-group">
-                    <input type="text" name="name" id="last-name" class="form-control" placeholder="Last Name">
-                </div>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="retype-password" id="retype-password" placeholder="Re-type Password">
-              </div>
-              <div class="text-center">
-              <button type="submit" class="btn btn-primary text-uppercase font-weight-bold" id="submit-btn">Sign Up</button>
-              </div>
-              <p class="lead text-center py-2">Do you have an account? <a href="">Login here!</a></p>
-            </form>
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="retype-password"
+            id="retype-password"
+            placeholder="Re-type Password"
+            required
+
+          />
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="btn btn-primary text-uppercase font-weight-bold"
+            id="submit-btn"
+            data-target="#myModal"
+          >
+            Sign Up
+          </button>
+        </div>
+        <p class="lead text-center py-2">
+          Do you have an account? <a href="">Login here!</a>
+        </p>
+      </form>
     </div>
 
 
-      
+    <!---modals-->
+
+    <!-- Button trigger modal -->
+
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Account Created Successfull!
+          </div>
+          <div class="modal-footer">
+            <a type="button" class="btn btn-primary" id="modal-login-btn" href="/index.html">Login Now!</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
     <!---app.js-->
     <script src="/src/scripts/app.js"></script>
-</body>
+
+    <!--spinner-->
+    <!-- <script src="/src/scripts/spinner.js"></script> -->
+  </body>
 </html>
