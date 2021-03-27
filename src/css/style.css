@@ -7,7 +7,7 @@ body
 {
     background: linear-gradient(90deg, rgba(142, 80, 253,1), rgba(98, 196, 250,1)); /* The least supported option. */
 }
-#sign-up-form, #login-form
+#sign-up-form, #login-form, #reset-password-form
 {
     min-width: 300px;
     max-width: 45%;
@@ -68,4 +68,9 @@ body
   margin-top: 180px;
 }
 
-
+#reset-btn
+{
+    background-color: rgba(142, 80, 253,1);
+    width: 100%;
+    color:white;
+}
