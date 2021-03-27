@@ -15,6 +15,10 @@
     />
     <link rel="stylesheet" href="./src/styles.css" />
 
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!---icons-->
     <link
       rel="stylesheet"
@@ -28,6 +32,14 @@
   </head>
 
   <body>
+
+    <!---Loader-->
+    <div class="d-flex justify-content-center" id="loader">
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+<div class="content-body">
     <div id="header">
       <nav class="navbar navbar-expand-lg navbar-light container">
         <a class="navbar-brand text-white font-weight-bold" href="#"
@@ -47,12 +59,12 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link px-4 mx-2" href="#" id="login-btn"
+              <a class="nav-link px-4 mx-2" href="src/pages/login.html" id="login-btn"
                 >login <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item active">
-              <a class="nav-link px-4 mr-3" href="/src/pages/signup.html" id="signup-btn"
+              <a class="nav-link px-4 mr-3" href="src/pages/signup.html" id="signup-btn"
                 >sign up <span class="sr-only">(current)</span></a
               >
             </li>
@@ -135,7 +147,7 @@
     <!-- familysection -->
 
     <div class="container my-4">
-      <h1 class="display-4 text-center font-weight-bold">Family Safety</h1>
+      <h1 class="display-4 text-center font-weight-bold text-uppercase">Family Safety</h1>
       <div class="row">
         <div class="col">
           <br /><br />
@@ -172,7 +184,7 @@
         quae earum!
       </p>
     </section>
-
+  
 
    
 
@@ -180,7 +192,7 @@
     <footer>
       <p class="text-center text-uppercase font-weight-bold">project build for IAD Project</p>
     </footer>
-
+    </div>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -190,7 +202,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!---App js-->
-    <script src="/src/scripts/app.js"></script>
 
+    <script src="src/scripts/spinner.js"></script>
   </body>
 </html>
