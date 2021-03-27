@@ -24,7 +24,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <!-- stylesheet -->
+    <!-- animation-->
+    <link rel="stylesheet" href="../css/animations/magic.min.css">
 
     <!-- mediaqueries -->
     <link rel="stylesheet" href="../css/mediaqueries/mobile-view.css" />
@@ -59,12 +60,12 @@
   </head>
   <body>
     <!---Loader-->
-    <div class="d-flex justify-content-center" id="loader">
+    <!-- <div class="d-flex justify-content-center" id="loader">
       <div class="spinner-grow" role="status">
         <span class="sr-only">Loading...</span>
       </div>
-    </div>
-    <!---form-->
+    </div> -->
+    <!---signup form-->
     <div class="content-body">
       <form action="" class="container rounded shadow-lg" id="sign-up-form">
         <h2 class="text-center text-uppercase font-weight-bold">
@@ -145,13 +146,66 @@
           </button>
         </div>
         <p class="lead text-center py-2">
-          Do you have an account? <a href="">Login here!</a>
+          Do you have an account? <a href="login.html" class="change-form-link" id="login-link">Login here!</a>
         </p>
       </form>
     </div>
-
-
+    
+    <!----login form-->
+    
+    <div class="content-body">
+      <form action="" class="container rounded shadow-lg" id="login-form">
+        <h2 class="text-center text-uppercase font-weight-bold">
+          Login account
+        </h2>
+        <p class="lead text-center font-weight-normal">
+          Login here to start using this application
+        </p>
+       
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="login-email"
+            placeholder="Enter Your Email"
+            required
+  
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+        </div>
+      
+        <div class="text-center">
+          <button
+            type="submit"
+            class="btn btn-primary text-uppercase font-weight-bold"
+            id="login-btn"
+            data-target="#myModal"
+            data-micron="bounce"
+          >
+            Login
+          </button>
+        </div>
+        <p class="lead text-center py-2">
+          Don't have an account <a href="signup.html" class="change-form-link">Signup here!</a>
+        </p>
+      </form>
+    </div>
+    
+    
+    
     <!---modals-->
+
+
 
     <!-- Button trigger modal -->
 
@@ -168,7 +222,7 @@
             Account Created Successfull!
           </div>
           <div class="modal-footer">
-            <a type="button" class="btn btn-primary" id="modal-login-btn" href="/index.html">Login Now!</a>
+            <a type="button" class="btn btn-primary" id="modal-login-btn" href="login.html">Login Now!</a>
           </div>
         </div>
       </div>
@@ -195,6 +249,6 @@
     <script src="../scripts/app.js"></script>
 
     <!--spinner-->
-    <script src="../scripts/spinner.js"></script>
+    <!-- <script src="../scripts/spinner.js"></script> -->
   </body>
 </html>

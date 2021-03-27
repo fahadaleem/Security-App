@@ -7,7 +7,7 @@ body
 {
     background: linear-gradient(90deg, rgba(142, 80, 253,1), rgba(98, 196, 250,1)); /* The least supported option. */
 }
-#sign-up-form
+#sign-up-form, #login-form
 {
     min-width: 300px;
     max-width: 45%;
@@ -16,6 +16,11 @@ body
     margin-bottom: 2rem;
 
     padding:3rem;
+}
+
+#login-form
+{
+    margin-top: 10vh;
 }
 
 .form-inline .input-group
@@ -46,7 +51,7 @@ body
     border-radius: 5px !important;
 }
 
-#submit-btn
+#submit-btn, #login-btn
 {
     width: 70%;
     font-size: 1.3rem;
