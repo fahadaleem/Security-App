@@ -15,6 +15,8 @@ const addUsertoDatabase = (user) => {
   fbDatabase.ref("users").child(key).set(user);
 };
 
+let currentUser;
+
 // error functions
 const getErrorMessage = (error) => {
   const errorObj = {
@@ -122,6 +124,7 @@ const loginUser = (e) => {
       var user = userCredential.user;
       console.log(user);
       window.location = "dashboard.html";
+      currentUser = fbAuth.currentUser;
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -148,34 +151,32 @@ const formToggle = (e) => {
   $("#sign-up-form").addClass("magictime boingInUp");
 };
 
-
 // function that will take input the email and send the mail at the users email
-const sendResetEmail = (e)=>{
-  e.preventDefault()
+const sendResetEmail = (e) => {
+  e.preventDefault();
   const resetEmail = $("#reset-email").val();
 
-  if(resetEmail.length===0)
-  {
+  if (resetEmail.length === 0) {
     alert("Please Enter Your Email!");
-    return false
+    return false;
   }
-  $("#reset-message").text(`We have sent you the password reset link at ${resetEmail}. Check your Email to reset your Security App Password!`);
+  $("#reset-message").text(
+    `We have sent you the password reset link at ${resetEmail}. Check your Email to reset your Security App Password!`
+  );
 
-fbAuth.sendPasswordResetEmail(resetEmail).then(function() {
-  // Email sent.
-  $("#sent-mail-modal").modal("show");
-
-}).catch(function(error) {
-  // An error happened.
-  console.log(error)
-  $("#reset-message").text(error.message);
-  $("#sent-mail-modal").modal("show");
-
-});
-}
-
-
-
+  fbAuth
+    .sendPasswordResetEmail(resetEmail)
+    .then(function () {
+      // Email sent.
+      $("#sent-mail-modal").modal("show");
+    })
+    .catch(function (error) {
+      // An error happened.
+      console.log(error);
+      $("#reset-message").text(error.message);
+      $("#sent-mail-modal").modal("show");
+    });
+};
 
 // add event on the signup or login button on the forms pages
 $(".change-form-link").on("click", formToggle);
@@ -185,33 +186,35 @@ $("#login-form").on("submit", loginUser);
 $("#sign-up-form").on("submit", signUpUser);
 
 // reset form
-$("#reset-password-form").on("submit", sendResetEmail)
+$("#reset-password-form").on("submit", sendResetEmail);
 
-
-const goToLoginForm = (e)=>{
+const goToLoginForm = (e) => {
   e.preventDefault();
   // hide signup form
   $("#sign-up-form").toggle();
 
-  const btnId= e.target.id;
-  if(btnId==="modal-login-btn")
-  {
-  $("#exampleModalLong").modal("hide");
-  }
-  else if(btnId==="reset-modal-login-btn")
-  {
-    
+  const btnId = e.target.id;
+  if (btnId === "modal-login-btn") {
+    $("#exampleModalLong").modal("hide");
+  } else if (btnId === "reset-modal-login-btn") {
     $("#sent-mail-modal").modal("hide");
-    window.location="signup.html"
+    window.location = "signup.html";
   }
-}
+};
 
-
-
-
-$(".modal-btn").on("click",goToLoginForm)
-$("#reset-form-close-btn").on("click", e=>{
+$(".modal-btn").on("click", goToLoginForm);
+$("#reset-form-close-btn").on("click", (e) => {
   e.preventDefault();
-  window.location = "signup.html"
-  console.log("fahad")
-})
+  window.location = "signup.html";
+  console.log("fahad");
+});
+
+// signout code
+const signOut = () => {
+  fbAuth
+    .signOut()
+    .then((resp) => {
+      console.log(resp);
+    })
+    .catch((error) => console.log(error));
+};

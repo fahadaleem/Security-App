@@ -5,3 +5,8 @@ $(document).ready(()=>{
         $(".content-body").show(1000);
     }, 2000)
 })
+
+
+export const hello_word = ()=>{
+    console.log("hello world!");
+}

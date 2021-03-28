@@ -1,0 +1,58 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container-fluid
+{
+    padding: 0 !important;
+}
+
+.side-nav
+{
+    background-color: #32373D;
+    width: 20%;
+    position: absolute;
+    height: 100%;
+    min-width: 250px
+}
+
+.bg-light
+{
+    background-color: #edf2f4 !important;
+}
+
+#profile-image
+{
+    width: 150px;
+    height: 150px;
+}
+
+.nav-item
+{
+    padding: 10px;
+}
+
+.nav-link
+{
+    color: gainsboro;
+    font-size: 1.1rem;
+}
+
+
+.nav-item:hover, .nav-link:hover
+{
+    background-color: #748CAB;
+    color:white;
+}
+
+#body-content
+{
+    width: 80%;
+    position: absolute;
+    right: 0;
+}
+
+.navbar
+{
+    background-color: #3d405b;
+}
