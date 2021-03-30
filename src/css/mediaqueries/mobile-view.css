@@ -23,5 +23,8 @@
   {
     min-width: 80% !important;
   }
+  #body-content{
+    width: 150px;
+  }
   
 }

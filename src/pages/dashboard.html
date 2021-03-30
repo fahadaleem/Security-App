@@ -29,10 +29,16 @@
     <!---font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!----jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../scripts/dashboard.js"></script>
+
+
   </head>
   <body>
     <div class="container-fluid">
-      <div class="side-nav shadow">
+      <div class="side-nav shadow" id="aa">
         <div id="profile" class="text-center p-2 py-3 bg-dark">
           <img
             src="../images/avatar.png"
@@ -42,46 +48,34 @@
           />
           <p id="user-name" class="lead text-light font-weight-bold">Muhammad Fahad Aleem</p>
         </div>
-        <div class="nav">
+        <nav class="nav">
           <ul class="nav flex-column w-100">
-            <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-dashcube px-3" aria-hidden="true"></i> Dashboard</a></li>
+            <li class="nav-item active"><a href="" class="nav-link"><i class="fa fa-dashcube px-3" aria-hidden="true"></i> Dashboard</a></li>
             <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-envelope-o px-3" aria-hidden="true"></i> Chat</a></li>
             <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-users px-3" aria-hidden="true"></i> Connections</a></li>
             <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-cog px-3" aria-hidden="true"></i> Account Setting</a></li>
             <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-sign-out px-3" aria-hidden="true"></i> Sign Out</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
 
       <div id="body-content" class="">
-        <nav class="navbar navbar-expand-sm">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-              aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                  <a class="dropdown-item" href="#">Action 1</a>
-                  <a class="dropdown-item" href="#">Action 2</a>
-                </div>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </div>
-        </nav>
+        <div id="top-nav" class="d-flex p-2 justify-content-between">
+          <button type="button" class="btn btn-dark" id="side-nav-toggler"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+          <form class="form-inline">
+            <div class="form-group search-filter d-flex">
+              <input type="text" name="" id="" class="form-control mx-2" placeholder="Search Users" aria-describedby="helpId">
+              <button type="button" class="btn btn-primary bg-dark border-0"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+          </form>
+        </div>
+
+        <div id="body" class="p-2">
+            <div class="location-setting">
+              <h2>Your Location <button type="button" class="btn btn-primary shadow btn-lg mx-5" id="get-location-btn">Get My Location</button></h2>
+              <img src="" alt="" id="map-image">
+            </div>
+        </div>
       </div>
     </div>
 
